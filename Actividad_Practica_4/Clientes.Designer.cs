@@ -1,6 +1,6 @@
 ﻿namespace Actividad_Practica_4
 {
-    partial class Clientes
+    partial class Form1
     {
         /// <summary>
         /// Required designer variable.
@@ -43,6 +43,8 @@
             this.txt_ClienteID = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txt_IdActualizado = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txt_NombreActualizado = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -52,8 +54,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.txt_DireccionActualizada = new System.Windows.Forms.TextBox();
-            this.txt_IdActualizado = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.dgv_Clientes = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btn_Cargar = new System.Windows.Forms.Button();
@@ -115,6 +115,7 @@
             this.btn_Agregar.TabIndex = 12;
             this.btn_Agregar.Text = "Agregar";
             this.btn_Agregar.UseVisualStyleBackColor = true;
+            this.btn_Agregar.Click += new System.EventHandler(this.btn_Agregar_Click);
             // 
             // txt_Correo
             // 
@@ -212,6 +213,22 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Actualizar";
             // 
+            // txt_IdActualizado
+            // 
+            this.txt_IdActualizado.Location = new System.Drawing.Point(20, 36);
+            this.txt_IdActualizado.Name = "txt_IdActualizado";
+            this.txt_IdActualizado.Size = new System.Drawing.Size(301, 22);
+            this.txt_IdActualizado.TabIndex = 16;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(27, 17);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(20, 16);
+            this.label10.TabIndex = 15;
+            this.label10.Text = "ID";
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -285,22 +302,6 @@
             this.txt_DireccionActualizada.Size = new System.Drawing.Size(185, 22);
             this.txt_DireccionActualizada.TabIndex = 7;
             // 
-            // txt_IdActualizado
-            // 
-            this.txt_IdActualizado.Location = new System.Drawing.Point(20, 36);
-            this.txt_IdActualizado.Name = "txt_IdActualizado";
-            this.txt_IdActualizado.Size = new System.Drawing.Size(301, 22);
-            this.txt_IdActualizado.TabIndex = 16;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(27, 17);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(20, 16);
-            this.label10.TabIndex = 15;
-            this.label10.Text = "ID";
-            // 
             // dgv_Clientes
             // 
             this.dgv_Clientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -331,7 +332,7 @@
             this.btn_Cargar.Text = "Cargar";
             this.btn_Cargar.UseVisualStyleBackColor = true;
             // 
-            // Clientes
+            // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -342,7 +343,7 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Clientes";
+            this.Name = "Form1";
             this.Text = "Clientes";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
