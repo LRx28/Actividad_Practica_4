@@ -176,6 +176,7 @@
             this.btn_Eliminar.TabIndex = 13;
             this.btn_Eliminar.Text = "Eliminar";
             this.btn_Eliminar.UseVisualStyleBackColor = true;
+            this.btn_Eliminar.Click += new System.EventHandler(this.btn_Eliminar_Click);
             // 
             // txt_ClienteID
             // 
@@ -331,6 +332,7 @@
             this.btn_Cargar.TabIndex = 21;
             this.btn_Cargar.Text = "Cargar";
             this.btn_Cargar.UseVisualStyleBackColor = true;
+            this.btn_Cargar.Click += new System.EventHandler(this.btn_Cargar_Click);
             // 
             // Form1
             // 

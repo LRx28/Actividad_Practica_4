@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Actividad_Practica_4.Model;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
@@ -21,7 +22,7 @@ namespace Actividad_Practica_4
             throw new UnintentionalCodeFirstException();
         }
 
-        public DbSet<GestionClientes> Cliente { get; set; }
+        public DbSet<Clientes> Clientes { get; set; }
 
 
     }
