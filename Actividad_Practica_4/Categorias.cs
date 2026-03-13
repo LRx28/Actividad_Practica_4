@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Actividad_Practica_4
 {
-    public partial class Categoriascs : Form
+    public partial class Categorias : Form
     {
-        public Categoriascs()
+        public Categorias()
         {
             InitializeComponent();
         }

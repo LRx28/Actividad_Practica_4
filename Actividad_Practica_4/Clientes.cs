@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Actividad_Practica_4
 {
-    public partial class Form1 : Form
+    public partial class Clientes : Form
     {
-        public Form1()
+        public Clientes()
         {
             InitializeComponent();
+        }
+
+        private void groupBox4_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Actividad_Practica_4
 {
-    partial class Categoriascs
+    partial class Categorias
     {
         /// <summary>
         /// Required designer variable.
