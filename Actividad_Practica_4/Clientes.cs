@@ -13,6 +13,7 @@ namespace Actividad_Practica_4
         {
             InitializeComponent();
             _context = new FrmClientes();
+            cargarClientes();
 
         }
 

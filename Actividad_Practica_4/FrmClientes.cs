@@ -24,6 +24,7 @@ namespace Actividad_Practica_4
 
         public DbSet<Clientes> Clientes { get; set; }
         public DbSet<Categorias> Categorias { get; set; }
+        public DbSet<Proveedores> Proveedores { get; set; } 
 
 
 

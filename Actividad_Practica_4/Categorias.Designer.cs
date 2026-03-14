@@ -111,6 +111,7 @@
             this.btn_EliminarCategoria.TabIndex = 13;
             this.btn_EliminarCategoria.Text = "Eliminar";
             this.btn_EliminarCategoria.UseVisualStyleBackColor = true;
+            this.btn_EliminarCategoria.Click += new System.EventHandler(this.btn_EliminarCategoria_Click);
             // 
             // txt_EliminarCategoria
             // 
@@ -182,6 +183,7 @@
             this.btn_ActualizarCategoria.TabIndex = 12;
             this.btn_ActualizarCategoria.Text = "Actualizar";
             this.btn_ActualizarCategoria.UseVisualStyleBackColor = true;
+            this.btn_ActualizarCategoria.Click += new System.EventHandler(this.btn_ActualizarCategoria_Click);
             // 
             // btn_CargarCategoria
             // 

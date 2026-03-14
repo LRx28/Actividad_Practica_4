@@ -17,6 +17,7 @@ namespace Actividad_Practica_4
         {
             InitializeComponent();
             _context = new FrmClientes();
+            cargarCategoria();
         }
         private void cargarCategoria()
         {
@@ -58,7 +59,7 @@ namespace Actividad_Practica_4
             {
                 MessageBox.Show("Categoria agregada correctamente.");
                 cargarCategoria();
-
+                txt_NombreCategoria.Clear();
 
             }
 
@@ -67,6 +68,95 @@ namespace Actividad_Practica_4
         private void btn_CargarCategoria_Click(object sender, EventArgs e)
         {
             cargarCategoria();
+        }
+
+        private void btn_EliminarCategoria_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txt_EliminarCategoria.Text))
+            {
+                MessageBox.Show("Debe introducir un Id valido.");
+                return;
+            }
+            try
+            {
+                var eliminarCategoria = int.Parse(txt_EliminarCategoria.Text);
+                Categorias categoriaEliminar = _context.Categorias.Find(eliminarCategoria);
+                if (categoriaEliminar == null)
+                {
+                    MessageBox.Show("Este ID de categoria no existe.");
+                    return;
+                }
+
+                _context.Categorias.Remove(categoriaEliminar);
+                var resultado = _context.SaveChanges();
+                if (resultado > 0)
+                {
+                    MessageBox.Show("Categoria eliminada correctamente.");
+                    cargarCategoria();
+                    txt_EliminarCategoria.Clear();
+                }
+            }
+            catch (Exception x)
+            {
+
+                MessageBox.Show($"Error al introducir el ID: {x}");
+            }
+            
+
+
+
+
+        }
+
+        private void btn_ActualizarCategoria_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(txt_IdCategoriaActualizar.Text))
+                {
+                    MessageBox.Show("Debe introducir un Id valido.");
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(txt_NombreCategoriaA.Text))
+                {
+                    MessageBox.Show("Debe introducir un nombre de la categoria valido.");
+                    return;
+                }
+
+                var eliminarCategoria = int.Parse(txt_IdCategoriaActualizar.Text);
+
+                Categorias categoriaEliminar = _context.Categorias.FirstOrDefault(q => q.CategoriaID.Equals(eliminarCategoria));
+                if (categoriaEliminar == null)
+                {
+                    MessageBox.Show("Este ID de categoria no existe.");
+                    return;
+                }
+
+                categoriaEliminar.NombreCategoria = txt_NombreCategoriaA.Text;
+                var resultado = _context.SaveChanges();
+                if (resultado > 0)
+                {
+                    MessageBox.Show("Categoria actualizada correctamente.");
+
+                }
+
+                cargarCategoria();
+                txt_IdCategoriaActualizar.Clear();
+                txt_NombreCategoriaA.Clear();
+
+            }
+            catch (Exception x)
+            {
+
+                MessageBox.Show($"Error al actualizar Categoria{x}");
+            }
+            
+            
+            
+
+
+
         }
     }
 }
