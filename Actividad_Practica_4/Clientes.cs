@@ -8,13 +8,12 @@ namespace Actividad_Practica_4
 {
     public partial class Clientes_Form : Form
     {
-        private FrmClientes _context;
+        private TiendaContext _context;
         public Clientes_Form()
         {
             InitializeComponent();
-            _context = new FrmClientes();
-            cargarClientes();
-
+            _context = new TiendaContext();
+           
         }
 
         private void cargarClientes()
@@ -124,7 +123,7 @@ namespace Actividad_Practica_4
                     MessageBox.Show("Cliente no encontrado.");
                     return;
                 }
-
+                    
                 _context.Clientes.Remove(nuevoCliente);
                 var resultado = _context.SaveChanges();
                 if (resultado > 0)

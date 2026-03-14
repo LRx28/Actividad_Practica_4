@@ -50,5 +50,17 @@ namespace Actividad_Practica_4
             Form1 frm = new Form1();
             frm.Show();
         }
+
+        private void proveedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            form3 frm = new form3();
+            frm.Show();
+        }
+
+        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form6 frm = new Form6();
+            frm.Show();
+        }
     }
 }

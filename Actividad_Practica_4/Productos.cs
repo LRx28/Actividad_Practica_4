@@ -16,5 +16,13 @@ namespace Actividad_Practica_4
         {
             InitializeComponent();
         }
+
+        public object ProductoID { get; internal set; }
+        public object NombreProducto { get; internal set; }
+        public object Precio { get; internal set; }
+        public object Stock { get; internal set; }
+        public object CategoriaID { get; internal set; }
+        public object ProveedorID { get; internal set; }
+        public string Descripcion { get; internal set; }
     }
 }

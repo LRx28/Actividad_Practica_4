@@ -13,11 +13,11 @@ namespace Actividad_Practica_4
 {
     public partial class form3 : Form
     {
-        private FrmClientes _context;
+        private TiendaContext _context;
         public form3()
         {
             InitializeComponent();
-            _context = new FrmClientes();
+            _context = new TiendaContext();
             CargarProveedores();
         }
         private void CargarProveedores()
@@ -176,5 +176,109 @@ namespace Actividad_Practica_4
             }
         }
 
+        private void btn_CargarProveedor_Click(object sender, EventArgs e)
+        {
+            CargarProveedores();
+        }
+
+        private void dgv_Proveedores_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_NombreProveedor_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox4_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_TelefonoProveedor_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_CorreoProveedor_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox5_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_CorreoA_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_TelefonoProveedorA_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_NombreProveedorA_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_IdProoveedorA_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

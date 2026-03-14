@@ -10,11 +10,11 @@ using System.Threading.Tasks;
 
 namespace Actividad_Practica_4
 {
-    public class FrmClientes  :  DbContext 
+    public class TiendaContext :  DbContext 
     {
         
-        public FrmClientes()
-            : base("name=FrmClientes")
+        public TiendaContext()
+            : base("name=TiendaContext")
         {
         }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -25,6 +25,8 @@ namespace Actividad_Practica_4
         public DbSet<Clientes> Clientes { get; set; }
         public DbSet<Categorias> Categorias { get; set; }
         public DbSet<Proveedores> Proveedores { get; set; } 
+        
+        public DbSet<Productos> Productos { get; set; }
 
 
 

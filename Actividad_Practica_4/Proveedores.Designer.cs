@@ -69,6 +69,7 @@
             this.dgv_Proveedores.RowTemplate.Height = 24;
             this.dgv_Proveedores.Size = new System.Drawing.Size(1229, 346);
             this.dgv_Proveedores.TabIndex = 0;
+            this.dgv_Proveedores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Proveedores_CellContentClick);
             // 
             // btn_CargarProveedor
             // 
@@ -78,6 +79,7 @@
             this.btn_CargarProveedor.TabIndex = 27;
             this.btn_CargarProveedor.Text = "Cargar";
             this.btn_CargarProveedor.UseVisualStyleBackColor = true;
+            this.btn_CargarProveedor.Click += new System.EventHandler(this.btn_CargarProveedor_Click);
             // 
             // btn_EliminarProveedor
             // 
@@ -105,6 +107,7 @@
             this.label6.Size = new System.Drawing.Size(87, 16);
             this.label6.TabIndex = 13;
             this.label6.Text = "ID Proveedor";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // groupBox2
             // 
@@ -117,6 +120,7 @@
             this.groupBox2.TabIndex = 25;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Eliminar";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // label2
             // 
@@ -126,6 +130,7 @@
             this.label2.Size = new System.Drawing.Size(123, 16);
             this.label2.TabIndex = 2;
             this.label2.Text = "Nombre Proveedor";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txt_NombreProveedor
             // 
@@ -133,6 +138,7 @@
             this.txt_NombreProveedor.Name = "txt_NombreProveedor";
             this.txt_NombreProveedor.Size = new System.Drawing.Size(204, 22);
             this.txt_NombreProveedor.TabIndex = 3;
+            this.txt_NombreProveedor.TextChanged += new System.EventHandler(this.txt_NombreProveedor_TextChanged);
             // 
             // btn_AgregarProveedor
             // 
@@ -153,6 +159,7 @@
             this.groupBox4.TabIndex = 28;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Mostrar";
+            this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
             // 
             // groupBox1
             // 
@@ -169,6 +176,7 @@
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Insertar";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // label1
             // 
@@ -178,6 +186,7 @@
             this.label1.Size = new System.Drawing.Size(61, 16);
             this.label1.TabIndex = 13;
             this.label1.Text = "Telefono";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txt_TelefonoProveedor
             // 
@@ -185,6 +194,7 @@
             this.txt_TelefonoProveedor.Name = "txt_TelefonoProveedor";
             this.txt_TelefonoProveedor.Size = new System.Drawing.Size(204, 22);
             this.txt_TelefonoProveedor.TabIndex = 14;
+            this.txt_TelefonoProveedor.TextChanged += new System.EventHandler(this.txt_TelefonoProveedor_TextChanged);
             // 
             // label3
             // 
@@ -194,6 +204,7 @@
             this.label3.Size = new System.Drawing.Size(48, 16);
             this.label3.TabIndex = 15;
             this.label3.Text = "Correo";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // txt_CorreoProveedor
             // 
@@ -201,6 +212,7 @@
             this.txt_CorreoProveedor.Name = "txt_CorreoProveedor";
             this.txt_CorreoProveedor.Size = new System.Drawing.Size(204, 22);
             this.txt_CorreoProveedor.TabIndex = 16;
+            this.txt_CorreoProveedor.TextChanged += new System.EventHandler(this.txt_CorreoProveedor_TextChanged);
             // 
             // groupBox5
             // 
@@ -219,6 +231,7 @@
             this.groupBox5.TabIndex = 29;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Actualizar";
+            this.groupBox5.Enter += new System.EventHandler(this.groupBox5_Enter);
             // 
             // label5
             // 
@@ -228,6 +241,7 @@
             this.label5.Size = new System.Drawing.Size(48, 16);
             this.label5.TabIndex = 15;
             this.label5.Text = "Correo";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // txt_CorreoA
             // 
@@ -235,6 +249,7 @@
             this.txt_CorreoA.Name = "txt_CorreoA";
             this.txt_CorreoA.Size = new System.Drawing.Size(204, 22);
             this.txt_CorreoA.TabIndex = 16;
+            this.txt_CorreoA.TextChanged += new System.EventHandler(this.txt_CorreoA_TextChanged);
             // 
             // label7
             // 
@@ -244,6 +259,7 @@
             this.label7.Size = new System.Drawing.Size(61, 16);
             this.label7.TabIndex = 13;
             this.label7.Text = "Telefono";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // txt_TelefonoProveedorA
             // 
@@ -251,6 +267,7 @@
             this.txt_TelefonoProveedorA.Name = "txt_TelefonoProveedorA";
             this.txt_TelefonoProveedorA.Size = new System.Drawing.Size(204, 22);
             this.txt_TelefonoProveedorA.TabIndex = 14;
+            this.txt_TelefonoProveedorA.TextChanged += new System.EventHandler(this.txt_TelefonoProveedorA_TextChanged);
             // 
             // label8
             // 
@@ -260,6 +277,7 @@
             this.label8.Size = new System.Drawing.Size(123, 16);
             this.label8.TabIndex = 2;
             this.label8.Text = "Nombre Proveedor";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // txt_NombreProveedorA
             // 
@@ -267,6 +285,7 @@
             this.txt_NombreProveedorA.Name = "txt_NombreProveedorA";
             this.txt_NombreProveedorA.Size = new System.Drawing.Size(204, 22);
             this.txt_NombreProveedorA.TabIndex = 3;
+            this.txt_NombreProveedorA.TextChanged += new System.EventHandler(this.txt_NombreProveedorA_TextChanged);
             // 
             // btn_ActualizarProvee
             // 
@@ -284,6 +303,7 @@
             this.txt_IdProoveedorA.Name = "txt_IdProoveedorA";
             this.txt_IdProoveedorA.Size = new System.Drawing.Size(180, 22);
             this.txt_IdProoveedorA.TabIndex = 18;
+            this.txt_IdProoveedorA.TextChanged += new System.EventHandler(this.txt_IdProoveedorA_TextChanged);
             // 
             // label9
             // 
@@ -293,11 +313,13 @@
             this.label9.Size = new System.Drawing.Size(20, 16);
             this.label9.TabIndex = 17;
             this.label9.Text = "ID";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(1236, 697);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.btn_CargarProveedor);
