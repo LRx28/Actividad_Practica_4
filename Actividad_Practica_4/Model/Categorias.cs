@@ -7,12 +7,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Actividad_Practica_4.Model
+namespace Actividad_Practica_4
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Categorias
+    public  class Categorias
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Categorias()
@@ -21,7 +21,7 @@ namespace Actividad_Practica_4.Model
         }
     
         public int CategoriaID { get; set; }
-        public string NombreCategoria { get; set; }
+        public string NombreCategoria { get; set; } 
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Productos> Productos { get; set; }

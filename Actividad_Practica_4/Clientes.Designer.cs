@@ -1,6 +1,6 @@
 ﻿namespace Actividad_Practica_4
 {
-    partial class Form1
+    partial class Clientes_Form
     {
         /// <summary>
         /// Required designer variable.
@@ -263,6 +263,7 @@
             this.btn_Actualizar.TabIndex = 12;
             this.btn_Actualizar.Text = "Actualizar";
             this.btn_Actualizar.UseVisualStyleBackColor = true;
+            this.btn_Actualizar.Click += new System.EventHandler(this.btn_Actualizar_Click);
             // 
             // txt_CorreoActualizado
             // 
@@ -334,7 +335,7 @@
             this.btn_Cargar.UseVisualStyleBackColor = true;
             this.btn_Cargar.Click += new System.EventHandler(this.btn_Cargar_Click);
             // 
-            // Form1
+            // Clientes_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -345,7 +346,7 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Form1";
+            this.Name = "Clientes_Form";
             this.Text = "Clientes";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -6,10 +6,10 @@ using System.Windows.Forms;
 
 namespace Actividad_Practica_4
 {
-    public partial class Form1 : Form
+    public partial class Clientes_Form : Form
     {
         private FrmClientes _context;
-        public Form1()
+        public Clientes_Form()
         {
             InitializeComponent();
             _context = new FrmClientes();
@@ -145,5 +145,77 @@ namespace Actividad_Practica_4
             
         }
 
+        private void btn_Actualizar_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txt_IdActualizado.Text))
+            {
+                MessageBox.Show("Debe introducir un ID valido.");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(txt_NombreActualizado.Text))
+            {
+                MessageBox.Show("Debe introducir un nombre valido.");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(txt_CorreoActualizado.Text))
+            {
+                MessageBox.Show("Debe introducir un Correo valido.");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(txt_Telefono_Actualizado.Text))
+            {
+                MessageBox.Show("Debe introducir un Telefono valido.");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(txt_DireccionActualizada.Text))
+            {
+                MessageBox.Show("Debe introducir una Direccion valida.");
+                return;
+            }
+
+            try
+            {
+                var clienteID = int.Parse(txt_IdActualizado.Text);
+                Clientes nuevoClientes = _context.Clientes.FirstOrDefault(q => q.ClienteID.Equals(clienteID));
+                if (nuevoClientes == null)
+                {
+                    MessageBox.Show("Este ID de cliente no existe.");
+                    return;
+
+                }
+
+
+                nuevoClientes.NombreCompleto = txt_NombreActualizado.Text;
+                nuevoClientes.CorreoElectronico = txt_CorreoActualizado.Text;
+                nuevoClientes.Telefono = txt_Telefono_Actualizado.Text;
+                nuevoClientes.Direccion = txt_DireccionActualizada.Text;
+
+                var resultado = _context.SaveChanges();
+                if (resultado > 0)
+                {
+                    MessageBox.Show("Cliente actualizado correctamente.");
+                }
+
+                cargarClientes();
+                txt_NombreActualizado.Clear();
+                txt_CorreoActualizado.Clear();
+                txt_Telefono_Actualizado.Clear();
+                txt_DireccionActualizada.Clear();
+
+
+
+
+            }
+            catch (Exception x)
+            {
+
+                MessageBox.Show($"Debe de ingresar un ID valido{x}");
+            }
+          
+        }
     }
 }
