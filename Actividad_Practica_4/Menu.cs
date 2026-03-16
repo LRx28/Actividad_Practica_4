@@ -59,7 +59,7 @@ namespace Actividad_Practica_4
 
         private void productosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form6 frm = new Form6();
+            Productos frm = new Productos();
             frm.Show();
         }
     }

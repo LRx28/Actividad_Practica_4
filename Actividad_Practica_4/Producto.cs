@@ -9,20 +9,26 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Actividad_Practica_4
 {
-    public partial class Form6 : Form
+    public partial class Productos : Form
     {
-        private TiendaContext _context;
+        private Actividad4Model _context;
+        
 
-        public Form6()
+        public Productos()
         {
             InitializeComponent();
-            _context = new TiendaContext();
-           
+
+                _context = new Actividad4Model();
+                CargarProductos();
+
+
+
         }
 
-        private void CargarProductos()
+        public void CargarProductos()
         {
             var listaProductos = _context.Productos
                  .Select(c => new
@@ -32,14 +38,15 @@ namespace Actividad_Practica_4
                      Precio = c.Precio,
                      Stock = c.Stock,
                      CategoriaID = c.CategoriaID,
-                     ProveedorID = c.ProveedorID
+                     
                  }).ToList();
-            var n = listaProductos.First();
+            
             dgv_Productos.DataSource = listaProductos;
         }
 
         private void btn_AgregarProducto_Click(object sender, EventArgs e)
         {
+
             if (string.IsNullOrWhiteSpace(txt_NombreProducto.Text))
             {
                 MessageBox.Show("El nombre del producto esta vario o incorrecto.");
@@ -69,12 +76,13 @@ namespace Actividad_Practica_4
             cmb_AgregarProductos.DisplayMember = "NombreCategoria";
             cmb_AgregarProductos.ValueMember = "CategoriaID";
 
-            Productos nuevoProducto = new Productos();
+            Model.Productos nuevoProducto = new Model.Productos();
             {
                 nuevoProducto.NombreProducto = txt_NombreProducto.Text;
                 nuevoProducto.Precio = precio;
                 nuevoProducto.Stock = stock;
                 nuevoProducto.Descripcion = txt_Descripcion.Text;
+                nuevoProducto.CategoriaID = (int)cmb_AgregarProductos.SelectedValue;
             }
             _context.Productos.Add(nuevoProducto);
             var resultado = _context.SaveChanges();
@@ -99,5 +107,17 @@ namespace Actividad_Practica_4
         {
             CargarProductos();
         }
+
+        
+
+        private void Productos_Load(object sender, EventArgs e)
+        {
+
+            cmb_AgregarProductos.DataSource = _context.Categorias.ToList();
+            cmb_AgregarProductos.DisplayMember = "NombreCategoria";
+            cmb_AgregarProductos.ValueMember = "CategoriaID";
+        }
     }
 }
+
+

@@ -13,11 +13,11 @@ namespace Actividad_Practica_4
 {
     public partial class form3 : Form
     {
-        private TiendaContext _context;
+        private Actividad4Model _context;
         public form3()
         {
             InitializeComponent();
-            _context = new TiendaContext();
+            _context = new Actividad4Model();
             CargarProveedores();
         }
         private void CargarProveedores()

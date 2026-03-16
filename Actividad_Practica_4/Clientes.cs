@@ -8,11 +8,11 @@ namespace Actividad_Practica_4
 {
     public partial class Clientes_Form : Form
     {
-        private TiendaContext _context;
+        private Actividad4Model _context;
         public Clientes_Form()
         {
             InitializeComponent();
-            _context = new TiendaContext();
+            _context = new Actividad4Model();
            
         }
 

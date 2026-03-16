@@ -9,14 +9,14 @@ namespace Actividad_Practica_4
 {
     public partial class Form1 : Form
     {
-        private TiendaContext _context;
+        private Actividad4Model _context;
 
         
 
         public Form1()
         {
             InitializeComponent();
-            _context = new TiendaContext();
+            _context = new Actividad4Model();
             cargarCategoria();
         }
         private void cargarCategoria()
