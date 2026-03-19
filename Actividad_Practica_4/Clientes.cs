@@ -13,7 +13,8 @@ namespace Actividad_Practica_4
         {
             InitializeComponent();
             _context = new Actividad4Model();
-           
+                cargarClientes();   
+
         }
 
         private void cargarClientes()
@@ -55,7 +56,7 @@ namespace Actividad_Practica_4
 
             }
 
-            if (string.IsNullOrWhiteSpace(txt_Telefono.Text))
+            if (string.IsNullOrEmpty(txt_Telefono.Text))
             {
                 MessageBox.Show("El Telefono esta vacio o incorrecto.");
                 return;
@@ -82,6 +83,7 @@ namespace Actividad_Practica_4
             {
                 MessageBox.Show("Cliente agregado correctamente.");
                 cargarClientes();
+                txt_IdActualizado.Clear();
                 txt_Nombre.Clear();
                 txt_Correo.Clear();
                 txt_Telefono.Clear();

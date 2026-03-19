@@ -42,11 +42,13 @@ namespace Actividad_Practica_4
 
         private void btn_AgregarCategoria_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txt_NombreCategoria.Text))
+            if (int.TryParse(txt_NombreCategoria.Text, out int nombreCategoria))
             {
                 MessageBox.Show("El nombre de la categoria esta vario o incorrecto.");
                 return;
+                   
             }
+            txt_NombreCategoria.Clear();
 
             Categorias nuevaCategoria = new Categorias();
             {
