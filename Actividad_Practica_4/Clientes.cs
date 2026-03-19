@@ -198,13 +198,15 @@ namespace Actividad_Practica_4
                 if (resultado > 0)
                 {
                     MessageBox.Show("Cliente actualizado correctamente.");
+                    cargarClientes();
+                    txt_NombreActualizado.Clear();
+                    txt_CorreoActualizado.Clear();
+                    txt_Telefono_Actualizado.Clear();
+                    txt_DireccionActualizada.Clear();
+
                 }
 
-                cargarClientes();
-                txt_NombreActualizado.Clear();
-                txt_CorreoActualizado.Clear();
-                txt_Telefono_Actualizado.Clear();
-                txt_DireccionActualizada.Clear();
+
 
 
 

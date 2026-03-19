@@ -101,6 +101,7 @@
             this.btn_ActualizarProductos.TabIndex = 12;
             this.btn_ActualizarProductos.Text = "Actualizar";
             this.btn_ActualizarProductos.UseVisualStyleBackColor = true;
+            this.btn_ActualizarProductos.Click += new System.EventHandler(this.btn_ActualizarProductos_Click);
             // 
             // groupBox5
             // 
@@ -347,6 +348,7 @@
             this.btn_EliminarProducto.TabIndex = 13;
             this.btn_EliminarProducto.Text = "Eliminar";
             this.btn_EliminarProducto.UseVisualStyleBackColor = true;
+            this.btn_EliminarProducto.Click += new System.EventHandler(this.btn_EliminarProducto_Click);
             // 
             // txt_EliminarProducto
             // 
